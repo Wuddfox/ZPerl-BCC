@@ -21,6 +21,14 @@ local IsRetail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
 local IsClassic = WOW_PROJECT_ID >= WOW_PROJECT_CLASSIC
 local IsVanillaClassic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
 
+local DebuffTypeColor = DebuffTypeColor or {
+	none    = { r = 0.80, g = 0.00, b = 0.00 },
+	Magic   = { r = 0.20, g = 0.60, b = 1.00 },
+	Curse   = { r = 0.60, g = 0.00, b = 1.00 },
+	Disease = { r = 0.60, g = 0.40, b = 0.00 },
+	Poison  = { r = 0.00, g = 0.60, b = 0.00 },
+}
+
 -- setCommon
 local function setCommon(self, filter, buffTemplate)
 	self:SetAttribute("template", buffTemplate)

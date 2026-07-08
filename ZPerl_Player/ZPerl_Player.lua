@@ -731,6 +731,9 @@ function XPerl_Player_DruidBarUpdate(self)
 		self.statsFrame:SetHeight(h)
 	end]]
 
+	local h = 40 + ((((druidBar and druidBar:IsShown()) and 1 or 0) + (pconf.repBar and 1 or 0) + (pconf.xpBar and 1 or 0)) * 10)
+	self.statsFrame:SetHeight(h)
+
 	XPerl_StatsFrameSetup(self, {druidBar, self.statsFrame.xpBar, self.statsFrame.repBar})
 	--[[if (XPerl_Player_Buffs_Position) then
 		XPerl_Player_Buffs_Position(self)
